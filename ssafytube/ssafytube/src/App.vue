@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <h1>TUBE</h1>
+    <h1>SSAFY TUBE</h1>
     <SearchBar @search-video = "search"/>
-    <VideoDetail :video = "video" />
+    <VideoDetail :video = "video" :videolist="videolist"/>
     <VideoList @select = "select" :videolist="videolist"/>
   </div>
 </template>
@@ -10,7 +10,7 @@
 <script>
 import SearchBar from '@/components/SearchBar'
 import VideoList from '@/components/VideoList'
-import VideoDetail from '@/components/VideoDetail'
+import VideoDetail from 'src/components/VideoDetail'
 export default {
   name: 'App',
   components: {

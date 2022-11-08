@@ -9,6 +9,7 @@
 export default {
     name : "VideoDetail",
     props : {
+    videolist : Object,
     video : Object,
      },
 }
