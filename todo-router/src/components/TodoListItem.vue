@@ -1,5 +1,6 @@
 <template>
-  <div class="item" @click="todoClick">
+  <div class="item" >
+    <div @click="todoClick">
     <div class="check_item"  >    
     <input type="checkbox" @click.stop="updateCompletedState"/>
     <span class="content" >{{ content }}</span>
@@ -11,10 +12,10 @@
     @click="updateImportantState">🤍</span>  -->
     <!--computed로 하기-->
     <button class="star" @click.stop="updateImportantState" >{{ star }} </button>
-
+  </div>
     <!--class로 하기-->
     <!-- <span @click="updateImportantState" :class="{'star':todo.isImportant}">★</span> -->
-    <TodoUpdateForm @input-content="inputContent" :todo="todo" v-show="isTodoClick" />
+    <TodoUpdateForm  @input-content="inputContent" :todo="todo" v-show="isTodoClick" />
   </div>
 </template>
 
